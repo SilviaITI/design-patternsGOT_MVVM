@@ -7,37 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61AE413A2ACDBF7F00642831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AE41392ACDBF7F00642831 /* Assets.xcassets */; };
-		61AE413D2ACDBF7F00642831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AE413B2ACDBF7F00642831 /* LaunchScreen.storyboard */; };
 		61AE41472ACDC00400642831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41462ACDC00400642831 /* AppDelegate.swift */; };
 		61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41482ACDC00600642831 /* SceneDelegate.swift */; };
-		61AE41682ACDC05D00642831 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41562ACDC05C00642831 /* HomeViewModel.swift */; };
-		61AE41692ACDC05D00642831 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41582ACDC05C00642831 /* HomeTableViewController.swift */; };
-		61AE416A2ACDC05D00642831 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE415A2ACDC05C00642831 /* HomeTableViewController.xib */; };
-		61AE416B2ACDC05D00642831 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE415C2ACDC05C00642831 /* HomeTableViewCell.swift */; };
-		61AE416C2ACDC05D00642831 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE415D2ACDC05C00642831 /* HomeTableViewCell.xib */; };
 		61AE416D2ACDC05D00642831 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE415F2ACDC05C00642831 /* SplashViewController.swift */; };
 		61AE416E2ACDC05D00642831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AE41602ACDC05C00642831 /* LaunchScreen.storyboard */; };
 		61AE416F2ACDC05D00642831 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE41622ACDC05C00642831 /* SplashViewController.xib */; };
 		61AE41702ACDC05D00642831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AE41642ACDC05C00642831 /* Assets.xcassets */; };
+		61AE417F2ACDC33800642831 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41772ACDC33800642831 /* HomeViewModel.swift */; };
+		61AE41802ACDC33800642831 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41792ACDC33800642831 /* HomeTableViewController.swift */; };
+		61AE41812ACDC33800642831 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417B2ACDC33800642831 /* HomeTableViewController.xib */; };
+		61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */; };
+		61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61AE412D2ACDBF7E00642831 /* Design-patternsGOT_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design-patternsGOT_MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61AE41392ACDBF7F00642831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61AE413C2ACDBF7F00642831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61AE413E2ACDBF7F00642831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AE41462ACDC00400642831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AE41482ACDC00600642831 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61AE41562ACDC05C00642831 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		61AE41582ACDC05C00642831 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		61AE415A2ACDC05C00642831 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
-		61AE415C2ACDC05C00642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		61AE415D2ACDC05C00642831 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		61AE415F2ACDC05C00642831 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		61AE41612ACDC05C00642831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61AE41622ACDC05C00642831 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		61AE41642ACDC05C00642831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61AE41772ACDC33800642831 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		61AE41792ACDC33800642831 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		61AE417B2ACDC33800642831 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
+		61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +66,10 @@
 		61AE412F2ACDBF7E00642831 /* Design-patternsGOT_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				61AE41752ACDC33800642831 /* Home */,
 				61AE414A2ACDC00E00642831 /* App */,
-				61AE41542ACDC05C00642831 /* Home */,
 				61AE41632ACDC05C00642831 /* Resources */,
 				61AE415E2ACDC05C00642831 /* Splash */,
-				61AE41392ACDBF7F00642831 /* Assets.xcassets */,
-				61AE413B2ACDBF7F00642831 /* LaunchScreen.storyboard */,
 				61AE413E2ACDBF7F00642831 /* Info.plist */,
 			);
 			path = "Design-patternsGOT_MVVM";
@@ -88,51 +82,6 @@
 				61AE41482ACDC00600642831 /* SceneDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		61AE41542ACDC05C00642831 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				61AE41552ACDC05C00642831 /* ViewModel */,
-				61AE41572ACDC05C00642831 /* Controller */,
-				61AE41592ACDC05C00642831 /* View */,
-				61AE415B2ACDC05C00642831 /* HomeCell */,
-			);
-			name = Home;
-			path = "../../../../Desktop/Design-patternsGOT_MVVM/Design-patternsGOT_MVVM/Home";
-			sourceTree = "<group>";
-		};
-		61AE41552ACDC05C00642831 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				61AE41562ACDC05C00642831 /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		61AE41572ACDC05C00642831 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				61AE41582ACDC05C00642831 /* HomeTableViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		61AE41592ACDC05C00642831 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				61AE415A2ACDC05C00642831 /* HomeTableViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		61AE415B2ACDC05C00642831 /* HomeCell */ = {
-			isa = PBXGroup;
-			children = (
-				61AE415C2ACDC05C00642831 /* HomeTableViewCell.swift */,
-				61AE415D2ACDC05C00642831 /* HomeTableViewCell.xib */,
-			);
-			path = HomeCell;
 			sourceTree = "<group>";
 		};
 		61AE415E2ACDC05C00642831 /* Splash */ = {
@@ -151,6 +100,50 @@
 				61AE41642ACDC05C00642831 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		61AE41752ACDC33800642831 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61AE41762ACDC33800642831 /* ViewModel */,
+				61AE41782ACDC33800642831 /* Controller */,
+				61AE417A2ACDC33800642831 /* View */,
+				61AE417C2ACDC33800642831 /* HomeCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		61AE41762ACDC33800642831 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61AE41772ACDC33800642831 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61AE41782ACDC33800642831 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61AE41792ACDC33800642831 /* HomeTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61AE417A2ACDC33800642831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61AE417B2ACDC33800642831 /* HomeTableViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61AE417C2ACDC33800642831 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */,
+				61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */,
+			);
+			path = HomeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,13 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AE413D2ACDBF7F00642831 /* LaunchScreen.storyboard in Resources */,
+				61AE41812ACDC33800642831 /* HomeTableViewController.xib in Resources */,
 				61AE416F2ACDC05D00642831 /* SplashViewController.xib in Resources */,
-				61AE416A2ACDC05D00642831 /* HomeTableViewController.xib in Resources */,
-				61AE416C2ACDC05D00642831 /* HomeTableViewCell.xib in Resources */,
 				61AE41702ACDC05D00642831 /* Assets.xcassets in Resources */,
+				61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */,
 				61AE416E2ACDC05D00642831 /* LaunchScreen.storyboard in Resources */,
-				61AE413A2ACDBF7F00642831 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,26 +219,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AE41692ACDC05D00642831 /* HomeTableViewController.swift in Sources */,
-				61AE416B2ACDC05D00642831 /* HomeTableViewCell.swift in Sources */,
+				61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */,
 				61AE41472ACDC00400642831 /* AppDelegate.swift in Sources */,
 				61AE416D2ACDC05D00642831 /* SplashViewController.swift in Sources */,
-				61AE41682ACDC05D00642831 /* HomeViewModel.swift in Sources */,
 				61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */,
+				61AE417F2ACDC33800642831 /* HomeViewModel.swift in Sources */,
+				61AE41802ACDC33800642831 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		61AE413B2ACDBF7F00642831 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61AE413C2ACDBF7F00642831 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		61AE41602ACDC05C00642831 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
