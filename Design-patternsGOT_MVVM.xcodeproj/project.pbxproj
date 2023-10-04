@@ -18,6 +18,7 @@
 		61AE41812ACDC33800642831 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417B2ACDC33800642831 /* HomeTableViewController.xib */; };
 		61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */; };
 		61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */; };
+		61AE41862ACDC60800642831 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41852ACDC60800642831 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		61AE417B2ACDC33800642831 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		61AE41852ACDC60800642831 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		61AE412F2ACDBF7E00642831 /* Design-patternsGOT_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				61AE41842ACDC5F200642831 /* Model */,
 				61AE41752ACDC33800642831 /* Home */,
 				61AE414A2ACDC00E00642831 /* App */,
 				61AE41632ACDC05C00642831 /* Resources */,
@@ -146,6 +149,14 @@
 			path = HomeCell;
 			sourceTree = "<group>";
 		};
+		61AE41842ACDC5F200642831 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61AE41852ACDC60800642831 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,6 +232,7 @@
 			files = (
 				61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */,
 				61AE41472ACDC00400642831 /* AppDelegate.swift in Sources */,
+				61AE41862ACDC60800642831 /* Character.swift in Sources */,
 				61AE416D2ACDC05D00642831 /* SplashViewController.swift in Sources */,
 				61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */,
 				61AE417F2ACDC33800642831 /* HomeViewModel.swift in Sources */,
