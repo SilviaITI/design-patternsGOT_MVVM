@@ -12,7 +12,7 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeTableView.largeContentTitle = "Characters"
+//        homeTableView.largeContentTitle = "Characters"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,13 +33,13 @@ class HomeTableViewController: UITableViewController {
     }
 
    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
-            return UITableViewCell()
-    }
-        //FALTA CONFIGURAR LA CELDA CON LOS DATOS
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
+//            return UITableViewCell()
+//    }
+//        //FALTA CONFIGURAR LA CELDA CON LOS DATOS
+//        return cell
+//    }
   
 
     /*
