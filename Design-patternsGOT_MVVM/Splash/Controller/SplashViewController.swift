@@ -17,11 +17,11 @@ protocol SplashViewProtocol: AnyObject {
 class SplashViewController: UIViewController {
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
-    private var viewModel: SplashViewModelProtocol?
+    var viewModel: SplashViewModelProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SplashViewModel(viewDelegate: self)
-        viewModel?.onViewLoaded()
+      
+        viewModel?.onViewLoaded()// la vista se ha cargado
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -34,6 +34,7 @@ class SplashViewController: UIViewController {
 extension SplashViewController: SplashViewProtocol {
     func navigateToHome() {
         let homeTableViewController = HomeTableViewController()
+        homeTableViewController.viewModel = HomeViewModel(viewDelegate: homeTableViewController)
         navigationController?.setViewControllers([homeTableViewController], animated: true)
         
     }
