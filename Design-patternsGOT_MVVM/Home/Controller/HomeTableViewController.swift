@@ -33,7 +33,7 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        viewModel?.data
     }
 
    
@@ -41,6 +41,7 @@ class HomeTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
     }
+        if(indexPath.count < characetr)
         //FALTA CONFIGURAR LA CELDA CON LOS DATOS
         return cell
     }

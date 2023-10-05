@@ -16,10 +16,26 @@ class HomeTableViewCell: UITableViewCell {
       
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
 
-        // Configure the view for the selected state
-    }
+
+override func prepareForReuse() {
+    characterName.text = nil
+    characterImage.image = nil
+}
+
+
+func updateViews(data: Character?) {
+    update(fullName: data?.fullName)
+    update(image: data?.image)
+}
+
+private func update(fullName: String?) {
+    characterName.text = fullName ?? ""
+}
+
+private func update(image: String?) {
+    characterImage.image = UIImage(named: image ?? "")
+}
     
 }

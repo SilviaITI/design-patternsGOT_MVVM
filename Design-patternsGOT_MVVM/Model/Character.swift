@@ -14,8 +14,8 @@ struct Character {
     let fullName: String
     let title: String
     let family: String
-   // let image: String
-    let imageUrl: String
+    let image: String
+   
 }
 
 extension Character {
@@ -25,77 +25,77 @@ extension Character {
                                       fullName: "Daenerys Targaryen",
                                       title:"Mother of Dragons",
                                       family: "House Targaryen",
-                                      imageUrl: "https://thronesapi.com/assets/images/daenerys.jpg")
+                                      image: "daenerys")
     static let character1 = Character(  id: 1,
                                         firstName: "Samwell",
                                         lastName: "Tarly",
                                         fullName: "Samwell Tarly",
                                         title: "Maester",
                                         family: "House Tarly",
-                                        imageUrl: "https://thronesapi.com/assets/images/sam.jpg")
+                                        image: "sam")
     static let character2 = Character(   id: 2,
                                          firstName: "Jon",
                                          lastName: "Snow",
                                          fullName: "Jon Snow",
                                          title: "King of the North",
                                          family: "House Stark",
-                                         imageUrl: "https://thronesapi.com/assets/images/jon-snow.jpg")
+                                         image: "jon-snow")
     static let character3 = Character(     id: 3,
                                            firstName: "Arya",
                                            lastName: "Stark",
                                            fullName: "Arya Stark",
                                            title: "No One",
                                            family: "House Stark",
-                                           imageUrl: "https://thronesapi.com/assets/images/arya-stark.jpg")
+                                           image: "arya-stark")
     static let character4 = Character(      id: 4,
                                             firstName: "Sansa",
                                             lastName: "Stark",
                                             fullName: "Sansa Stark",
                                             title: "Lady of Winterfell",
                                             family: "House Stark",
-                                            imageUrl: "https://thronesapi.com/assets/images/sansa-stark.jpeg")
+                                            image: "sansa-stark")
     static let character5 = Character(    id: 5,
                                           firstName: "Brandon",
                                           lastName: "Stark",
                                           fullName: "Brandon Stark",
                                           title: "Lord of Winterfell",
                                           family: "House Stark",
-                                          imageUrl: "https://thronesapi.com/assets/images/bran-stark.jpg")
+                                          image: "bran-stark")
     static let character6 = Character( id: 6,
                                        firstName: "Ned",
                                        lastName: "Stark",
                                        fullName: "Ned Stark",
                                        title: "Lord of Winterfell",
                                        family: "House Stark",
-                                       imageUrl: "https://thronesapi.com/assets/images/ned-stark.jpg")
+                                       image: "ned-stark")
     static let character7 = Character(     id: 7,
                                            firstName: "Robert",
                                            lastName: "Baratheon",
                                            fullName: "Robert Baratheon",
                                            title: "Lord of the Seven Kingdoms",
                                            family: "House Baratheon",
-                                           imageUrl: "https://thronesapi.com/assets/images/robert-baratheon.jpeg")
+                                           image:"robert-baratheon" )
     static let character8 = Character(     id: 8,
                                            firstName: "Jamie",
                                            lastName: "Lannister",
                                            fullName: "Jamie Lannister",
                                            title: "Lord Commander of the Kingsguard",
                                            family: "House Lannister",
-                                           imageUrl: "https://thronesapi.com/assets/images/jaime-lannister.jpg")
+                                           image:"jaime-lannister" )
     static let character9 = Character(     id: 9,
                                            firstName: "Cersei",
                                            lastName: "Lannister",
                                            fullName: "Cersei Lannister",
                                            title: "Lady of Casterly Rock",
                                            family: "House Lannister",
-                                           imageUrl: "https://thronesapi.com/assets/images/cersei.jpg")
+                                           image: "cersei")
     static let character10 = Character(  id: 10,
                                          firstName: "Cateyln",
                                          lastName: "Stark",
                                          fullName: "Catelyn Stark",
                                          title: "Lady of Winterfell",
                                          family: "House Stark",
-                                         imageUrl: "https://thronesapi.com/assets/images/catelyn-stark.jpg")
+                                         image: "catelyn-stark")
     
 }
 
