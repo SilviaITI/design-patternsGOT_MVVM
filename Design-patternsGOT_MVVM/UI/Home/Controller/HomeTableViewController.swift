@@ -9,7 +9,8 @@ import UIKit
 
 // MARK: - PROTOCOL
 protocol HomeViewProtocol: AnyObject {
-    func navigateToDetail()
+    func navigateToDetail(with data: Character?)
+    func updateViews()
 }
 
 // MARK: - CLASS
@@ -22,6 +23,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         registerCell()
         viewModel?.onViewsLoaded()
+        
         
     }
     private func registerCell() {
@@ -40,6 +42,7 @@ class HomeTableViewController: UITableViewController {
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
     }
@@ -49,10 +52,25 @@ class HomeTableViewController: UITableViewController {
         }
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.onItemSelected(at: indexPath.row)
+    }
   
 }
 
 // MARK: - EXTENSION
 extension HomeTableViewController: HomeViewProtocol {
+    func updateViews() {
+        tableView.reloadData()
+    }
+    
+  
+    func navigateToDetail(with data: Character?) {
+        let detailViewController = DetailViewController()
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+   
+    
     
 }

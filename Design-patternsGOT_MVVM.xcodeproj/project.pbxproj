@@ -20,6 +20,9 @@
 		61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */; };
 		61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */; };
 		61AE41862ACDC60800642831 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41852ACDC60800642831 /* Character.swift */; };
+		61DF93AB2AD0001C00EA5402 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF93A92AD0001C00EA5402 /* DetailViewController.swift */; };
+		61DF93AC2AD0001C00EA5402 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DF93AA2AD0001C00EA5402 /* DetailViewController.xib */; };
+		61DF93AE2AD0003400EA5402 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF93AD2AD0003400EA5402 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		61AE41852ACDC60800642831 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		61DF93A92AD0001C00EA5402 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		61DF93AA2AD0001C00EA5402 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		61DF93AD2AD0003400EA5402 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +202,7 @@
 		61DF93A52ACFFEAC00EA5402 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				61DF93A82ACFFED500EA5402 /* Model */,
+				61DF93A82ACFFED500EA5402 /* View */,
 				61DF93A72ACFFECD00EA5402 /* Controller */,
 				61DF93A62ACFFEC000EA5402 /* ViewModel */,
 			);
@@ -206,6 +212,7 @@
 		61DF93A62ACFFEC000EA5402 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				61DF93AD2AD0003400EA5402 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -213,15 +220,17 @@
 		61DF93A72ACFFECD00EA5402 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61DF93A92AD0001C00EA5402 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		61DF93A82ACFFED500EA5402 /* Model */ = {
+		61DF93A82ACFFED500EA5402 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61DF93AA2AD0001C00EA5402 /* DetailViewController.xib */,
 			);
-			path = Model;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AE41812ACDC33800642831 /* HomeTableViewController.xib in Resources */,
+				61DF93AC2AD0001C00EA5402 /* DetailViewController.xib in Resources */,
 				61AE416F2ACDC05D00642831 /* SplashViewController.xib in Resources */,
 				61AE41702ACDC05D00642831 /* Assets.xcassets in Resources */,
 				61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */,
@@ -297,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DF93AB2AD0001C00EA5402 /* DetailViewController.swift in Sources */,
 				61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */,
 				61AE41472ACDC00400642831 /* AppDelegate.swift in Sources */,
+				61DF93AE2AD0003400EA5402 /* DetailViewModel.swift in Sources */,
 				61AE41862ACDC60800642831 /* Character.swift in Sources */,
 				61AE416D2ACDC05D00642831 /* SplashViewController.swift in Sources */,
 				61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */,
