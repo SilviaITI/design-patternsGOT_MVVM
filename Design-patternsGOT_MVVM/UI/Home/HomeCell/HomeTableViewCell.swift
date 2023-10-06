@@ -9,16 +9,15 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
+  
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-      
+
     }
 
     
-
-
 override func prepareForReuse() {
     characterName.text = nil
     characterImage.image = nil

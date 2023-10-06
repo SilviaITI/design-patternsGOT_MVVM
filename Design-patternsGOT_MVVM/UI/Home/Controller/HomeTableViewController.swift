@@ -21,6 +21,7 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Game of Thrones"
         registerCell()
         viewModel?.onViewsLoaded()
         
@@ -67,6 +68,7 @@ extension HomeTableViewController: HomeViewProtocol {
   
     func navigateToDetail(with data: Character?) {
         let detailViewController = DetailViewController()
+        detailViewController.viewModel = DetailViewModel(viewData: data, viewDelegate: detailViewController )
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
