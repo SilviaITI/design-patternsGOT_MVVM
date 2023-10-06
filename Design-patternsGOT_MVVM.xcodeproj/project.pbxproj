@@ -32,7 +32,7 @@
 		61AE41612ACDC05C00642831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61AE41622ACDC05C00642831 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		61AE41642ACDC05C00642831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61AE41772ACDC33800642831 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		61AE41772ACDC33800642831 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; usesTabs = 0; };
 		61AE41792ACDC33800642831 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		61AE417B2ACDC33800642831 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 		61AE412F2ACDBF7E00642831 /* Design-patternsGOT_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				61DF93A42ACFFE8900EA5402 /* UI */,
+				61DF93A52ACFFEAC00EA5402 /* Detail */,
 				61AE414A2ACDC00E00642831 /* App */,
 				61AE41842ACDC5F200642831 /* Model */,
-				61AE415E2ACDC05C00642831 /* Splash */,
-				61AE41752ACDC33800642831 /* Home */,
 				61AE41632ACDC05C00642831 /* Resources */,
 				61AE413E2ACDBF7F00642831 /* Info.plist */,
 			);
@@ -180,6 +180,46 @@
 			isa = PBXGroup;
 			children = (
 				61AE41852ACDC60800642831 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61DF93A42ACFFE8900EA5402 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				61AE415E2ACDC05C00642831 /* Splash */,
+				61AE41752ACDC33800642831 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		61DF93A52ACFFEAC00EA5402 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				61DF93A82ACFFED500EA5402 /* Model */,
+				61DF93A72ACFFECD00EA5402 /* Controller */,
+				61DF93A62ACFFEC000EA5402 /* ViewModel */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		61DF93A62ACFFEC000EA5402 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61DF93A72ACFFECD00EA5402 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61DF93A82ACFFED500EA5402 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";

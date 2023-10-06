@@ -6,9 +6,10 @@
 //
 
 import UIKit
+
 // MARK: - PROTOCOL
 protocol HomeViewProtocol: AnyObject {
-    
+    func navigateToDetail()
 }
 
 // MARK: - CLASS
@@ -20,20 +21,21 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
+        viewModel?.onViewsLoaded()
+        
     }
     private func registerCell() {
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
-    // MARK: - Table view data source
-
+    // MARK:  Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+       
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        viewModel?.data
+       
+        return viewModel?.dataCount ?? 0
     }
 
    
@@ -41,8 +43,10 @@ class HomeTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
     }
-        if(indexPath.count < characetr)
-        //FALTA CONFIGURAR LA CELDA CON LOS DATOS
+        if let data =  viewModel?.data(at: indexPath.row) {
+            cell.updateViews(data: data)
+       
+        }
         return cell
     }
   

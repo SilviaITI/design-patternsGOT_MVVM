@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeTableViewController" customModule="Design_patternsGOT_MVVM" customModuleProvider="target">
             <connections>
-                <outlet property="homeTableView" destination="i5M-Pr-FkT" id="bcd-2T-MmJ"/>
+                <outlet property="homeTableView" destination="i5M-Pr-FkT" id="yNp-no-p27"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,10 +20,6 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <viewLayoutGuide key="safeArea" id="vLr-E1-eTs"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <connections>
-                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
-                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
-            </connections>
             <point key="canvasLocation" x="36" y="21"/>
         </tableView>
     </objects>
