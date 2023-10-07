@@ -14,10 +14,13 @@ protocol SplashViewModelProtocol {
 
 // MARK: - CLASS
 final class SplashViewModel {
+    
+    // MARK: PROPERTIES
     private weak var viewDelegate: SplashViewProtocol?
     init(viewDelegate: SplashViewProtocol? = nil) {
         self.viewDelegate = viewDelegate
     }
+    // MARK: LIFECYCLE
     private func loadData() {
         viewDelegate?.showLoader(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in

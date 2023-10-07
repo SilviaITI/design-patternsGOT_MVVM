@@ -15,9 +15,8 @@ protocol DetailViewModelProtocol {
 // MARK: - CLASS
 final class DetailViewModel {
     var viewData:Character?
-    // delegado de la clase
+    // viewDelegate
     private weak var viewDelegate: DetailViewProtocol?
-  
     init(viewData: Character? = nil, viewDelegate: DetailViewProtocol? = nil) {
         self.viewData = viewData
         self.viewDelegate = viewDelegate
@@ -26,10 +25,9 @@ final class DetailViewModel {
   
 // MARK: - EXTENSION
 extension DetailViewModel: DetailViewModelProtocol {
-
+    // send data to view for each character
     func updateView() {
         guard let viewData else { return }
-        
         viewDelegate?.setView(viewData: viewData)
     }
     

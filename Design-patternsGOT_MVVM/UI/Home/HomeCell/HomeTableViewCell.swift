@@ -8,33 +8,34 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-
-  
+    
+    // MARK: OUTLETS
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
+    
+    // MARK: LYFECYCLE
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
-
+    // function to prepare cell data
+    override func prepareForReuse() {
+        characterName.text = nil
+        characterImage.image = nil
+    }
     
-override func prepareForReuse() {
-    characterName.text = nil
-    characterImage.image = nil
-}
-
-
-func updateViews(data: Character?) {
-    update(fullName: data?.fullName)
-    update(image: data?.image)
-}
-
-private func update(fullName: String?) {
-    characterName.text = fullName ?? ""
-}
-
-private func update(image: String?) {
-    characterImage.image = UIImage(named: image ?? "")
-}
+    // uptdating of the view with character data
+    func updateViews(data: Character?) {
+        update(fullName: data?.fullName)
+        update(image: data?.image)
+    }
+    
+    private func update(fullName: String?) {
+        characterName.text = fullName ?? ""
+    }
+    
+    private func update(image: String?) {
+        characterImage.image = UIImage(named: image ?? "")
+    }
     
 }

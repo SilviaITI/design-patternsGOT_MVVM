@@ -14,23 +14,22 @@ protocol HomeViewProtocol: AnyObject {
 }
 
 // MARK: - CLASS
-
 class HomeTableViewController: UITableViewController {
+    // MARK: PROPERTIES
     var viewModel: HomeViewModelProtocol?
-    
+    // MARK: OUTLETS
     @IBOutlet var homeTableView: UITableView!
+    // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Game of Thrones"
         registerCell()
         viewModel?.onViewsLoaded()
-        
-        
     }
     private func registerCell() {
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
-    // MARK:  Table view data source
+    //MARK: TABLE VIEW FUNCTIONS
     override func numberOfSections(in tableView: UITableView) -> Int {
        
         return 1
@@ -65,7 +64,7 @@ extension HomeTableViewController: HomeViewProtocol {
         tableView.reloadData()
     }
     
-  
+  // Navigation to detail with data and delegate as parameters
     func navigateToDetail(with data: Character?) {
         let detailViewController = DetailViewController()
         detailViewController.viewModel = DetailViewModel(viewData: data, viewDelegate: detailViewController )

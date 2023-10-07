@@ -11,17 +11,17 @@ protocol SplashViewProtocol: AnyObject {
     func showLoader(_ show:Bool)
     func navigateToHome()
 }
+
 // MARK: - CLASS
-
-
 class SplashViewController: UIViewController {
     
+    // MARK: OUTLETS
     @IBOutlet weak var loader: UIActivityIndicatorView!
     var viewModel: SplashViewModelProtocol?
+    // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        viewModel?.onViewLoaded()// la vista se ha cargado
+        viewModel?.onViewLoaded()
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -30,15 +30,15 @@ class SplashViewController: UIViewController {
 }
 
     // MARK: -EXTENSION
- 
 extension SplashViewController: SplashViewProtocol {
+    // MARK: NAVIGATION
     func navigateToHome() {
         let homeTableViewController = HomeTableViewController()
         homeTableViewController.viewModel = HomeViewModel(viewDelegate: homeTableViewController)
         navigationController?.setViewControllers([homeTableViewController], animated: true)
         
     }
-    
+    // activity indicator function
     func showLoader(_ show:Bool) {
         switch show {
         case true where !loader.isAnimating:

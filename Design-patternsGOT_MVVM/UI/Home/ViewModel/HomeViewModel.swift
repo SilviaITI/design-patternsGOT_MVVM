@@ -16,52 +16,37 @@ protocol HomeViewModelProtocol {
   
 }
 // MARK: - CLASS
-
 final class HomeViewModel {
+    // MARK: PROPERTIES
     private weak var viewDelegate: HomeViewProtocol?
     private var viewData:[Character] = []
-    
-    
     init(viewDelegate: HomeViewProtocol? = nil) {
         self.viewDelegate = viewDelegate
     }
+    // MARK: PRIVATE FUNCTIONS
     private func loadData(){
         viewData = characters
         viewDelegate?.updateViews()
-        
-        
-        // notificar a la vista que se han cargado los datos
     }
-    //    private func decodeData() {
-    //        if let characterData = charactersJSON.data(using: .utf8) {
-    //             do {
-    //                 let characters = try JSONDecoder().decode([Character].self, from: characterData)
-    //                 print(characters)
-    //             } catch {
-    //                 print("Error al decodificar el JSON: \(error)")
-    //             }
-    //         } else {
-    //             print("Error al convertir la cadena JSON a datos.")
-    //         }
-    //    }
-    //}}
 }
-// MARK: - DELEGATE
+// MARK: - EXTENSION
 extension HomeViewModel: HomeViewModelProtocol {
+    
+    // navigate to detail with data of a character
     func onItemSelected(at index: Int) {
         guard let data = data(at: index) else {return}
         viewDelegate?.navigateToDetail(with: data)
     }
-    
+    // data of character
     func data(at index: Int) -> Character? {
         guard  index < dataCount else { return nil}
         return viewData[index]
     }
-    
+    // count items of array
     var dataCount: Int {
         viewData.count
     }
-    
+    // the view is loaded 
     func onViewsLoaded() {
         loadData()
     }

@@ -13,7 +13,7 @@ protocol DetailViewProtocol: AnyObject {
 // MARK: - CLASS
 class DetailViewController: UIViewController {
     
-  
+    // MARK: OUTLETS
     @IBOutlet weak var gotLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
     // viewModel
     var viewModel: DetailViewModel?
     
+    // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.updateView()
@@ -32,8 +33,9 @@ class DetailViewController: UIViewController {
 }
 // MARK: - EXTENSION
     extension DetailViewController: DetailViewProtocol {
-        func setView(viewData: Character){
         
+        // updating of the character properties
+        func setView(viewData: Character){
             characterImage.image = UIImage(named: viewData.image)
             firstNameLabel.text = viewData.firstName
             lastNameLabel.text = viewData.lastName
