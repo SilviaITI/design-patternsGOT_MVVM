@@ -13,7 +13,7 @@ protocol HomeViewModelProtocol {
     func onViewsLoaded()
     func data(at index:Int) -> Character?
     func onItemSelected(at index: Int)
-  
+    
 }
 // MARK: - CLASS
 final class HomeViewModel {
@@ -27,18 +27,19 @@ final class HomeViewModel {
     
     // MARK: PRIVATE FUNCTIONS
     private func loadData(){
-        
+        self.viewDelegate?.showLoading()
         NetworkModel.shared.getCharacters { result in
             switch result {
             case let .success(characters):
                 self.viewData = characters
-                print(characters)
             case let .failure(error):
                 print("Error: \(error)")
+                
             }
-            
-            DispatchQueue.main.async { self.viewDelegate?.updateViews()
+            DispatchQueue.main.async {
+                self.viewDelegate?.updateViews()
             }
+            self.viewDelegate?.hideLoading()
             
         }
     }
@@ -61,15 +62,10 @@ extension HomeViewModel: HomeViewModelProtocol {
     var dataCount: Int {
         viewData.count
     }
-    // the view is loaded 
+    // the view is loaded
     func onViewsLoaded() {
         loadData()
-        
-        
+            
     }
-    
- 
-    
-    
-    
+
 }

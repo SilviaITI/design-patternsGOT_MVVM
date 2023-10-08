@@ -36,11 +36,11 @@ class HomeTableViewCell: UITableViewCell {
     
     private func update(imageUrl: URL) {
         characterImage.setImage(for: imageUrl)
-            
-            
-            }
-        }
-    
+        
+        
+    }
+}
+
     
     
 

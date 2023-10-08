@@ -8,19 +8,19 @@
 import UIKit
 
 class ContinentTableViewCell: UITableViewCell {
- 
+    let identifier = "ContinentCell"
     @IBOutlet weak var letterImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    
     let westerosText: String = """
-    Westeros es un intrigante mundo de fantasía que sirve como el escenario central de la aclamada serie de televisión Juego de Tronos y la serie de novelas Canción de Hielo y Fuego escritas por George R.R. Martin. Este continente ficticio es un lugar lleno de reinos, conflictos políticos, familias nobles en lucha por el poder y un trasfondo de elementos sobrenaturales. Westeros está situado en un mundo vasto y diverso, con climas que van desde los desiertos abrasadores en el sur hasta las gélidas tierras del norte. Sus ciudades y castillos son testigos de alianzas cambiantes, traiciones y batallas épicas mientras los personajes luchan por el Trono de Hierro y el control del reino. Westeros es un lugar donde la intriga, la ambición y la lucha por el poder están en constante ebullición, creando una narrativa rica y cautivadora que ha cautivado a legiones de fanáticos en todo el mundo.
+    Westeros que sirve como el escenario central de la aclamada serie de televisión Juego de Tronos y la serie de novelas Canción de Hielo y Fuego escritas por George R.R. Martin. Este continente es un lugar lleno de reinos, conflictos políticos, familias nobles en lucha por el poder. Westeros está situado en un mundo vasto y diverso, con climas que van desde los desiertos abrasadores en el sur hasta las gélidas tierras del norte. Sus ciudades son testigos de alianzas cambiantes, traiciones y batallas épicas. Westeros es un lugar donde la intriga, la ambición y la lucha por el poder están en constante ebullición que ha cautivado a legiones de fanáticos en todo el mundo.
 """
     
     let essosText: String = """
-    Essos es un vasto continente ficticio en el mundo de Juego de Tronos y Canción de Hielo y Fuego, creado por George R.R. Martin. Es un lugar repleto de exotismo y diversidad, en contraste con el continente de Westeros. En Essos, los paisajes van desde desiertos abrasadores y ciudades amuralladas hasta vastas llanuras y exuberantes junglas. Este continente es el hogar de una rica variedad de culturas, religiones y reinos, con una historia intrigante llena de conflictos y ambiciones. Además, Essos es conocido por sus misterios, como la ciudad de Braavos y la tierra más allá del Mar de Jade. En este mundo de fantasía, Essos desempeña un papel crucial en la trama, proporcionando un telón de fondo fascinante y un escenario para muchas de las historias y aventuras de la serie y las novelas.
+    Essos es un vasto continente ficticio en el mundo de Juego de Tronos y Canción de Hielo y Fuego, creado por George R.R. Martin. Es un lugar repleto de exotismo y diversidad, en contraste con el continente de Westeros. En Essos, los paisajes van desde desiertos abrasadores y ciudades amuralladas hasta vastas llanuras y exuberantes junglas. Además, Essos es conocido por sus misterios, como la ciudad de Braavos y la tierra más allá del Mar de Jade. En este mundo de fantasía, Essos desempeña un papel crucial en la trama, proporcionando un telón de fondo fascinante y un escenario para muchas de las historias y aventuras de la serie y las novelas.
 """
     let sothoryosText: String = """
     
@@ -35,7 +35,7 @@ En el mundo ficticio de "Juego de Tronos" y "Canción de Hielo y Fuego" de Georg
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     
     func updateViews(data: Continent) {
         updateText(data: data)
@@ -45,8 +45,8 @@ En el mundo ficticio de "Juego de Tronos" y "Canción de Hielo y Fuego" de Georg
     private func updateText(data: Continent) {
         nameLabel.text = data.name
     }
-   private  func updateImageText(data: Continent) {
-    var version:Int = data.id
+    private  func updateImageText(data: Continent) {
+        let version:Int = data.id
         switch version {
         case 0 :
             letterImage.image = UIImage(named: "image_w")
@@ -55,14 +55,14 @@ En el mundo ficticio de "Juego de Tronos" y "Canción de Hielo y Fuego" de Georg
             letterImage.image = UIImage(named: "image_e")
             descriptionLabel.text = essosText
         case 2 :
-            letterImage.image = UIImage(named: "image_s")
+            letterImage.image = UIImage(named: "image_S")
             descriptionLabel.text = sothoryosText
         case 3 :
             letterImage.image = UIImage(named: "image_u")
             descriptionLabel.text = ulthosText
         default : break
             
-          
+            
         }
             
         }

@@ -8,9 +8,9 @@
 import Foundation
 // MARK: - PROTOCOL
 protocol SplashViewModelProtocol {
-   func onViewLoaded()
+    func onViewLoaded()
     func checkSelectedButton(_ sender: Int)
-   
+    
 }
 
 // MARK: - CLASS
@@ -23,23 +23,20 @@ final class SplashViewModel {
     }
     // MARK: LIFECYCLE
     
-     private func loadDataCharacters() {
+    private func loadDataCharacters() {
         
-        viewDelegate?.showLoader(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
-            self?.viewDelegate?.showLoader(false)
-            self?.viewDelegate?.navigateToHome()
-            
-        }
+        self.viewDelegate?.navigateToHome()
+        
     }
+    
     private func loadContinents(){
-        viewDelegate?.showLoader(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
-            self?.viewDelegate?.showLoader(false)
-            self?.viewDelegate?.navigateToContinent()    }
+        
+        self.viewDelegate?.navigateToContinent()
+        
     }
+    
 }
-                                      
+
 // MARK: -EXTENSION
 extension SplashViewModel: SplashViewModelProtocol {
     func checkSelectedButton(_ sender: Int) {
@@ -56,6 +53,6 @@ extension SplashViewModel: SplashViewModelProtocol {
         loadDataCharacters()
         loadContinents()
     }
-   
+    
     
 }

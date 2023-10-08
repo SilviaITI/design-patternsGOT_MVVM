@@ -28,6 +28,8 @@
 		61AE41822ACDC33800642831 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */; };
 		61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */; };
 		61AE41862ACDC60800642831 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41852ACDC60800642831 /* Character.swift */; };
+		61BA25A12AD320170082F650 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA25A02AD320170082F650 /* Extensions.swift */; };
+		61BA25A32AD3201F0082F650 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA25A22AD3201F0082F650 /* SpinnerView.swift */; };
 		61DF93AB2AD0001C00EA5402 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF93A92AD0001C00EA5402 /* DetailViewController.swift */; };
 		61DF93AC2AD0001C00EA5402 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DF93AA2AD0001C00EA5402 /* DetailViewController.xib */; };
 		61DF93AE2AD0003400EA5402 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF93AD2AD0003400EA5402 /* DetailViewModel.swift */; };
@@ -57,6 +59,8 @@
 		61AE417D2ACDC33800642831 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		61AE417E2ACDC33800642831 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		61AE41852ACDC60800642831 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		61BA25A02AD320170082F650 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		61BA25A22AD3201F0082F650 /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		61DF93A92AD0001C00EA5402 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		61DF93AA2AD0001C00EA5402 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		61DF93AD2AD0003400EA5402 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -73,13 +77,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61138CE52AD2A851002636D1 /* First screen  */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "First screen ";
-			sourceTree = "<group>";
-		};
 		61138CE62AD2A863002636D1 /* ContinentsTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +170,6 @@
 				61AE414A2ACDC00E00642831 /* App */,
 				61AE41842ACDC5F200642831 /* Model */,
 				61AE41632ACDC05C00642831 /* Resources */,
-				61138CE32AD29D2E002636D1 /* UIimage+SetImage.swift */,
 				61AE413E2ACDBF7F00642831 /* Info.plist */,
 			);
 			path = "Design-patternsGOT_MVVM";
@@ -201,6 +197,9 @@
 		61AE41632ACDC05C00642831 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				61BA25A22AD3201F0082F650 /* SpinnerView.swift */,
+				61BA25A02AD320170082F650 /* Extensions.swift */,
+				61138CE32AD29D2E002636D1 /* UIimage+SetImage.swift */,
 				61AE41642ACDC05C00642831 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -264,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				61138CE62AD2A863002636D1 /* ContinentsTableView */,
-				61138CE52AD2A851002636D1 /* First screen  */,
 				61AE415E2ACDC05C00642831 /* Splash */,
 				61AE41752ACDC33800642831 /* Home */,
 			);
@@ -391,10 +389,12 @@
 				61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */,
 				61138CE42AD29D2E002636D1 /* UIimage+SetImage.swift in Sources */,
 				61AE417F2ACDC33800642831 /* HomeViewModel.swift in Sources */,
+				61BA25A32AD3201F0082F650 /* SpinnerView.swift in Sources */,
 				61138CE82AD2A91A002636D1 /* Continent.swift in Sources */,
 				61138CF02AD2AAA3002636D1 /* ContinentsTableViewController.swift in Sources */,
 				61138CF52AD2ADA3002636D1 /* ContinentTableViewCell.swift in Sources */,
 				61AE41802ACDC33800642831 /* HomeTableViewController.swift in Sources */,
+				61BA25A12AD320170082F650 /* Extensions.swift in Sources */,
 				61339B782ACEFFB400E18A69 /* SplashViewModel.swift in Sources */,
 				61138CED2AD2AA63002636D1 /* ContinentViewModel.swift in Sources */,
 			);

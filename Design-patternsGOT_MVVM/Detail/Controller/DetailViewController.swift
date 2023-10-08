@@ -29,21 +29,21 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         viewModel?.onViewsLoaded()
     }
-  
+    
 }
 // MARK: - EXTENSION
-    extension DetailViewController: DetailViewProtocol {
-        
-        // updating of the character properties
-        func setView(viewData: Character){
-            characterImage.setImage(for: viewData.imageUrl)
-            firstNameLabel.text = viewData.firstName
-            lastNameLabel.text = viewData.lastName
-            titleLabel.text = viewData.title
-            familyLabel.text = viewData.family
-            title = viewData.fullName
-            gotLabel.text = "GOT"
-        }
+extension DetailViewController: DetailViewProtocol {
+    
+    // updating of the character properties
+    func setView(viewData: Character){
+        characterImage.setImage(for: viewData.imageUrl)
+        firstNameLabel.text = viewData.firstName
+        lastNameLabel.text = viewData.lastName
+        titleLabel.text = viewData.title
+        familyLabel.text = viewData.family
+        title = viewData.fullName
+        gotLabel.text = "GOT"
     }
+}
 
 

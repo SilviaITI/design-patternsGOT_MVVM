@@ -8,78 +8,69 @@
 import UIKit
 // MARK: - PROTOCOL
 protocol ContinentsViewProtocol: AnyObject {
+    func updateViews()
+    func showLoading()
+    func hideLoading()
     
 }
 // MARK: - CLASS
 class ContinentTableViewController: UITableViewController {
+    // MARK: PROPERTIES
     var viewModel: ContinentViewModelProtocol?
-    
-    
     @IBOutlet var continentsTable: UITableView!
+    // MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Continents"
+        registerCell()
+        viewModel?.onViewsLoaded()
+        tableView.rowHeight = 440
         
     }
+    // MARK: PRIVATE FUNCTIONS
+    private func registerCell() {
+        tableView.register(UINib(nibName: "ContinentTableViewCell",bundle: nil), forCellReuseIdentifier: "ContinentCell") 
+    }
     
-    // MARK: - Table view data source
+    // MARK: - TABLEVIEW FUNCTIONS
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewModel?.dataCount ?? 0
     }
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        // Configure the cell...
-        
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "ContinentCell", for: indexPath) as? ContinentTableViewCell else {
+            return UITableViewCell()
+        }
+        if let data = viewModel?.data(at: indexPath.row) {
+            cell.updateViews(data: data)
+            
+        }
         return cell
+        
     }
     
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }    
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
 }
-  // MARK: - EXTENSION
-    extension ContinentTableViewController: ContinentsViewProtocol {
+// MARK: - EXTENSION
+extension ContinentTableViewController: ContinentsViewProtocol{
+    func updateViews() {
+        
+        tableView.reloadData()
+    }
+    // Function that shows custom spinner
+    func showLoading() {
+        DispatchQueue.main .async {
+            self.manageSpinner(inside: self.view, action: .add)
+        }
+    }
+    // Function that hides custom spinner
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.manageSpinner(inside: self.view, action: .remove)
+        }
+    }
     
 }
