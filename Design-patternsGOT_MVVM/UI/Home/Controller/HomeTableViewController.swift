@@ -26,6 +26,7 @@ class HomeTableViewController: UITableViewController {
         title = "Game of Thrones"
         registerCell()
         viewModel?.onViewsLoaded()
+      
     }
     private func registerCell() {
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")

@@ -17,14 +17,17 @@ protocol HomeViewModelProtocol {
 }
 // MARK: - CLASS
 final class HomeViewModel {
+    
     // MARK: PROPERTIES
     private weak var viewDelegate: HomeViewProtocol?
     private var viewData:[Character] = []
     init(viewDelegate: HomeViewProtocol? = nil) {
         self.viewDelegate = viewDelegate
     }
+    
     // MARK: PRIVATE FUNCTIONS
     private func loadData(){
+        
         NetworkModel.shared.getCharacters { result in
             switch result {
             case let .success(characters):
@@ -34,12 +37,13 @@ final class HomeViewModel {
                 print("Error: \(error)")
             }
             
+            DispatchQueue.main.async { self.viewDelegate?.updateViews()
+            }
+            
         }
-        
     }
-}
     
-
+}
 // MARK: - EXTENSION
 extension HomeViewModel: HomeViewModelProtocol {
     
