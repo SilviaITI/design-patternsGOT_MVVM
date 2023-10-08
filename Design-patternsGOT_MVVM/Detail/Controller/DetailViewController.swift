@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         
         // updating of the character properties
         func setView(viewData: Character){
-            characterImage.image = UIImage(named: viewData.image)
+            characterImage.setImage(for: viewData.imageUrl)
             firstNameLabel.text = viewData.firstName
             lastNameLabel.text = viewData.lastName
             titleLabel.text = viewData.title

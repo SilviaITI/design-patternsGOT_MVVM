@@ -25,17 +25,22 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     // uptdating of the view with character data
-    func updateViews(data: Character?) {
-        update(fullName: data?.fullName)
-        update(image: data?.image)
+    func updateViews(data: Character) {
+        update(fullName: data.fullName)
+        update(imageUrl: data.imageUrl)
     }
     
-    private func update(fullName: String?) {
-        characterName.text = fullName ?? ""
+    private func update(fullName: String) {
+        characterName.text = fullName
     }
     
-    private func update(image: String?) {
-        characterImage.image = UIImage(named: image ?? "")
-    }
+    private func update(imageUrl: URL) {
+        characterImage.setImage(for: imageUrl)
+            
+            
+            }
+        }
     
-}
+    
+    
+
