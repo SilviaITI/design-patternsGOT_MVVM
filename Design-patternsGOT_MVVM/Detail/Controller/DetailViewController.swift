@@ -27,23 +27,23 @@ class DetailViewController: UIViewController {
     // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.updateView()
+        viewModel?.onViewsLoaded()
     }
-  
+    
 }
 // MARK: - EXTENSION
-    extension DetailViewController: DetailViewProtocol {
-        
-        // updating of the character properties
-        func setView(viewData: Character){
-            characterImage.image = UIImage(named: viewData.image)
-            firstNameLabel.text = viewData.firstName
-            lastNameLabel.text = viewData.lastName
-            titleLabel.text = viewData.title
-            familyLabel.text = viewData.family
-            title = viewData.fullName
-            gotLabel.text = "GOT"
-        }
+extension DetailViewController: DetailViewProtocol {
+    
+    // updating of the character properties
+    func setView(viewData: Character){
+        characterImage.setImage(for: viewData.imageUrl)
+        firstNameLabel.text = viewData.firstName
+        lastNameLabel.text = viewData.lastName
+        titleLabel.text = viewData.title
+        familyLabel.text = viewData.family
+        title = viewData.fullName
+        gotLabel.text = "GOT"
     }
+}
 
 

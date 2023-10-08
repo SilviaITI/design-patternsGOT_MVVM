@@ -8,9 +8,9 @@
 import Foundation
 // MARK: - PROTOCOL
 protocol DetailViewModelProtocol {
-    func updateView()
+    func onViewsLoaded()
     
-          
+    
 }
 // MARK: - CLASS
 final class DetailViewModel {
@@ -22,11 +22,11 @@ final class DetailViewModel {
         self.viewDelegate = viewDelegate
     }
 }
-  
+
 // MARK: - EXTENSION
 extension DetailViewModel: DetailViewModelProtocol {
     // send data to view for each character
-    func updateView() {
+    func onViewsLoaded() {
         guard let viewData else { return }
         viewDelegate?.setView(viewData: viewData)
     }
