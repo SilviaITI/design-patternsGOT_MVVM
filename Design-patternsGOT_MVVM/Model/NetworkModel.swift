@@ -53,6 +53,24 @@ final class NetworkModel {
             completion: completion
         )
     }
+    func getContinents(
+        completion: @escaping (Result<[Continent], NetworkError>) -> Void
+    ) {
+        var components = baseComponents
+        components.path = "/api/v2/Continents"
+        
+        guard let url = components.url else {
+            completion(.failure(.malformedUrl))
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        createTask(
+            for: request,
+            using: [Continent].self,
+            completion: completion
+        )
+    }
 
    
     func createTask<T: Decodable>(

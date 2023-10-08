@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.updateView()
+        viewModel?.onViewsLoaded()
     }
   
 }

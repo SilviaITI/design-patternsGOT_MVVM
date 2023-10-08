@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		61138CE02AD284C0002636D1 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CDF2AD284C0002636D1 /* NetworkModel.swift */; };
 		61138CE42AD29D2E002636D1 /* UIimage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CE32AD29D2E002636D1 /* UIimage+SetImage.swift */; };
+		61138CE82AD2A91A002636D1 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CE72AD2A91A002636D1 /* Continent.swift */; };
+		61138CED2AD2AA63002636D1 /* ContinentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CEC2AD2AA63002636D1 /* ContinentViewModel.swift */; };
+		61138CF02AD2AAA3002636D1 /* ContinentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CEE2AD2AAA3002636D1 /* ContinentsTableViewController.swift */; };
+		61138CF12AD2AAA3002636D1 /* ContinentsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61138CEF2AD2AAA3002636D1 /* ContinentsTableViewController.xib */; };
+		61138CF52AD2ADA3002636D1 /* ContinentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61138CF32AD2ADA3002636D1 /* ContinentTableViewCell.swift */; };
+		61138CF62AD2ADA3002636D1 /* ContinentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61138CF42AD2ADA3002636D1 /* ContinentTableViewCell.xib */; };
 		61339B782ACEFFB400E18A69 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61339B772ACEFFB400E18A69 /* SplashViewModel.swift */; };
 		61AE41472ACDC00400642831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41462ACDC00400642831 /* AppDelegate.swift */; };
 		61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE41482ACDC00600642831 /* SceneDelegate.swift */; };
@@ -30,6 +36,12 @@
 /* Begin PBXFileReference section */
 		61138CDF2AD284C0002636D1 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		61138CE32AD29D2E002636D1 /* UIimage+SetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIimage+SetImage.swift"; sourceTree = "<group>"; };
+		61138CE72AD2A91A002636D1 /* Continent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
+		61138CEC2AD2AA63002636D1 /* ContinentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentViewModel.swift; sourceTree = "<group>"; };
+		61138CEE2AD2AAA3002636D1 /* ContinentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentsTableViewController.swift; sourceTree = "<group>"; };
+		61138CEF2AD2AAA3002636D1 /* ContinentsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinentsTableViewController.xib; sourceTree = "<group>"; };
+		61138CF32AD2ADA3002636D1 /* ContinentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentTableViewCell.swift; sourceTree = "<group>"; };
+		61138CF42AD2ADA3002636D1 /* ContinentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinentTableViewCell.xib; sourceTree = "<group>"; };
 		61339B772ACEFFB400E18A69 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		61AE412D2ACDBF7E00642831 /* Design-patternsGOT_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design-patternsGOT_MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AE413E2ACDBF7F00642831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +73,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61138CE52AD2A851002636D1 /* First screen  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "First screen ";
+			sourceTree = "<group>";
+		};
+		61138CE62AD2A863002636D1 /* ContinentsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				61138CF22AD2AD87002636D1 /* ContinentCell */,
+				61138CEB2AD2A999002636D1 /* ViewModel */,
+				61138CEA2AD2A98F002636D1 /* Controller */,
+				61138CE92AD2A988002636D1 /* View */,
+			);
+			path = ContinentsTableView;
+			sourceTree = "<group>";
+		};
+		61138CE92AD2A988002636D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61138CEF2AD2AAA3002636D1 /* ContinentsTableViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61138CEA2AD2A98F002636D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61138CEE2AD2AAA3002636D1 /* ContinentsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61138CEB2AD2A999002636D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61138CEC2AD2AA63002636D1 /* ContinentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61138CF22AD2AD87002636D1 /* ContinentCell */ = {
+			isa = PBXGroup;
+			children = (
+				61138CF32AD2ADA3002636D1 /* ContinentTableViewCell.swift */,
+				61138CF42AD2ADA3002636D1 /* ContinentTableViewCell.xib */,
+			);
+			path = ContinentCell;
+			sourceTree = "<group>";
+		};
 		61339B742ACEFF7300E18A69 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +255,7 @@
 			children = (
 				61AE41852ACDC60800642831 /* Character.swift */,
 				61138CDF2AD284C0002636D1 /* NetworkModel.swift */,
+				61138CE72AD2A91A002636D1 /* Continent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +263,8 @@
 		61DF93A42ACFFE8900EA5402 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				61138CE62AD2A863002636D1 /* ContinentsTableView */,
+				61138CE52AD2A851002636D1 /* First screen  */,
 				61AE415E2ACDC05C00642831 /* Splash */,
 				61AE41752ACDC33800642831 /* Home */,
 			);
@@ -297,9 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61138CF62AD2ADA3002636D1 /* ContinentTableViewCell.xib in Resources */,
 				61AE41812ACDC33800642831 /* HomeTableViewController.xib in Resources */,
 				61DF93AC2AD0001C00EA5402 /* DetailViewController.xib in Resources */,
 				61AE416F2ACDC05D00642831 /* SplashViewController.xib in Resources */,
+				61138CF12AD2AAA3002636D1 /* ContinentsTableViewController.xib in Resources */,
 				61AE41702ACDC05D00642831 /* Assets.xcassets in Resources */,
 				61AE41832ACDC33800642831 /* HomeTableViewCell.xib in Resources */,
 				61AE416E2ACDC05D00642831 /* LaunchScreen.storyboard in Resources */,
@@ -323,8 +391,12 @@
 				61AE41492ACDC00600642831 /* SceneDelegate.swift in Sources */,
 				61138CE42AD29D2E002636D1 /* UIimage+SetImage.swift in Sources */,
 				61AE417F2ACDC33800642831 /* HomeViewModel.swift in Sources */,
+				61138CE82AD2A91A002636D1 /* Continent.swift in Sources */,
+				61138CF02AD2AAA3002636D1 /* ContinentsTableViewController.swift in Sources */,
+				61138CF52AD2ADA3002636D1 /* ContinentTableViewCell.swift in Sources */,
 				61AE41802ACDC33800642831 /* HomeTableViewController.swift in Sources */,
 				61339B782ACEFFB400E18A69 /* SplashViewModel.swift in Sources */,
+				61138CED2AD2AA63002636D1 /* ContinentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

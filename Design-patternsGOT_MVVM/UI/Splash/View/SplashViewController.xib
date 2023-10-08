@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="Design_patternsGOT_MVVM" customModuleProvider="target">
             <connections>
+                <outlet property="charactersButton" destination="ynK-Fh-dki" id="eT1-Od-OS1"/>
+                <outlet property="continentsButton" destination="6Uf-5e-TB7" id="FRE-Xt-x4G"/>
                 <outlet property="loader" destination="Dzu-mk-l7y" id="FYc-eU-8Lb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,19 +25,50 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dzu-mk-l7y">
-                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <rect key="frame" x="178" y="412.66666666666669" width="37" height="26.666666666666686"/>
                     <color key="tintColor" systemColor="systemCyanColor"/>
                 </activityIndicatorView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynK-Fh-dki">
+                    <rect key="frame" x="20" y="250" width="353" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7NM-f7-Hvv"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Personajes"/>
+                    <connections>
+                        <action selector="tapCharacterbUTTON:" destination="-1" eventType="touchUpInside" id="dY4-0d-2gR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-5e-TB7">
+                    <rect key="frame" x="20" y="545" width="353" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="AR0-x0-TZF"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Continentes"/>
+                    <connections>
+                        <action selector="tapContinenButtom:" destination="-1" eventType="touchUpInside" id="Hdi-tM-MJS"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Dzu-mk-l7y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8TS-2M-Fxm"/>
                 <constraint firstItem="Dzu-mk-l7y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DgO-qc-YpU"/>
+                <constraint firstItem="ynK-Fh-dki" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="191" id="Hf1-hm-mG4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ynK-Fh-dki" secondAttribute="trailing" constant="20" id="KSh-wH-Zvg"/>
                 <constraint firstAttribute="bottom" secondItem="HV2-Rx-Dht" secondAttribute="bottom" id="OKj-i3-eDN"/>
+                <constraint firstItem="6Uf-5e-TB7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SrK-tg-XUR"/>
+                <constraint firstItem="Dzu-mk-l7y" firstAttribute="top" secondItem="ynK-Fh-dki" secondAttribute="bottom" constant="122.67" id="Yw7-X6-Ziw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Uf-5e-TB7" secondAttribute="bottom" constant="233" id="auB-yj-TTQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Uf-5e-TB7" secondAttribute="trailing" constant="20" id="eSe-8q-rnt"/>
                 <constraint firstItem="HV2-Rx-Dht" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h2B-4M-gGB"/>
                 <constraint firstItem="HV2-Rx-Dht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jYE-cJ-1Q2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HV2-Rx-Dht" secondAttribute="trailing" id="mqQ-i6-8sj"/>
+                <constraint firstItem="ynK-Fh-dki" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="w27-1W-Gsi"/>
             </constraints>
             <point key="canvasLocation" x="102" y="21"/>
         </view>
