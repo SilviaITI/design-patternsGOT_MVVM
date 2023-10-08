@@ -10,7 +10,7 @@ import Foundation
 // MARK: - PROTOCOL
 protocol HomeViewModelProtocol {
     var dataCount: Int { get }
-  func onViewsLoaded()
+    func onViewsLoaded()
     func data(at index:Int) -> Character?
     func onItemSelected(at index: Int)
   
@@ -25,10 +25,21 @@ final class HomeViewModel {
     }
     // MARK: PRIVATE FUNCTIONS
     private func loadData(){
-        viewData = characters
-        viewDelegate?.updateViews()
+        NetworkModel.shared.getCharacters { result in
+            switch result {
+            case let .success(characters):
+                self.viewData = characters
+                print(characters)
+            case let .failure(error):
+                print("Error: \(error)")
+            }
+            
+        }
+        
     }
 }
+    
+
 // MARK: - EXTENSION
 extension HomeViewModel: HomeViewModelProtocol {
     
@@ -49,6 +60,8 @@ extension HomeViewModel: HomeViewModelProtocol {
     // the view is loaded 
     func onViewsLoaded() {
         loadData()
+        
+        
     }
     
  

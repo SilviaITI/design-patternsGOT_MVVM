@@ -19,6 +19,7 @@ class HomeTableViewController: UITableViewController {
     var viewModel: HomeViewModelProtocol?
     // MARK: OUTLETS
     @IBOutlet var homeTableView: UITableView!
+    
     // MARK: LYFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class HomeTableViewController: UITableViewController {
     private func registerCell() {
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
+    
     //MARK: TABLE VIEW FUNCTIONS
     override func numberOfSections(in tableView: UITableView) -> Int {
        

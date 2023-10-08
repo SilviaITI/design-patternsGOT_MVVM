@@ -14,7 +14,7 @@ protocol SplashViewProtocol: AnyObject {
 
 // MARK: - CLASS
 class SplashViewController: UIViewController {
-    
+   
     // MARK: OUTLETS
     @IBOutlet weak var loader: UIActivityIndicatorView!
     var viewModel: SplashViewModelProtocol?
